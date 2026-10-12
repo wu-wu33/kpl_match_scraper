@@ -24,7 +24,10 @@ This tool uses Selenium to crawl KPL match data from the official Honor of Kings
 
 ### Input Files
 
-You need two Excel files in the same directory:
+You need two Excel files in the same directory. Both can be generated from 
+the official KPL API:
+
+    https://prod.comp.smoba.qq.com/leaguesite/matches/open?league_id=20260001
 
 1. **match_metadata.xlsx**: Match information with columns:
    - `match_id`
@@ -33,8 +36,11 @@ You need two Excel files in the same directory:
    - `match_address`
 
 2. **team_list.xlsx**: Team mapping with columns:
-   - `team_name` (Chinese name)
-   - `team` (English abbreviation)
+   - `team_name` (Chinese name, e.g., "北京JDG")
+   - `team` (English abbreviation, e.g., "JDG")
+
+You can change the `league_id` parameter in the URL to fetch data for other 
+seasons or leagues (e.g., `20260001` for KPL 2026 Spring).
 
 ### Chrome Driver
 
